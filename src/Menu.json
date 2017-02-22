@@ -1,0 +1,8 @@
+{
+    "items": [
+        {
+            "text": "PDF",
+            "route": "laralum::pdf.index"
+        }
+    ]
+}
