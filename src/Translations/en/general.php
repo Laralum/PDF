@@ -8,8 +8,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'generate_pdf'  => 'Generate pdf',
-    'generate_pdf_desc' => 'Generate and preview a pdf.',
+    'generate_pdf'  => 'Generate PDF',
+    'generate_pdf_desc' => 'Generate and preview a PDF.',
     'view_pdf'      => 'View PDF',
     'home'      => 'Home',
     'text'      => 'Text',

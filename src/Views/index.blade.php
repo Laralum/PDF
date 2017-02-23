@@ -11,8 +11,7 @@
 @section('content')
     <div class="uk-container uk-container-large">
         <div uk-grid>
-            <div class="uk-width-1-1@s uk-width-1-5@l uk-width-1-3@xl"></div>
-            <div class="uk-width-1-1@s uk-width-3-5@l uk-width-1-3@xl">
+            <div class="uk-width-1-1@s">
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-header">
                         @lang('laralum_pdf::general.generate_pdf_desc')
@@ -24,7 +23,7 @@
                                 <div class="uk-margin">
                                     <label class="uk-form-label">@lang('laralum_pdf::general.text')</label>
                                     <div class="uk-form-controls">
-                                        <textarea name="text" class="uk-textarea" rows="5" placeholder="@lang('laralum_pdf::general.text')">{{ old('text') }}</textarea>
+                                        <textarea name="text" class="uk-textarea" rows="15" placeholder="@lang('laralum_pdf::general.text')">{{ old('text') }}</textarea>
                                     </div>
                                 </div>
 
@@ -38,7 +37,6 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-width-1-1@s uk-width-1-5@l uk-width-1-3@xl"></div>
         </div>
     </div>
 

@@ -6,9 +6,6 @@ Route::group([
         'namespace' => 'Laralum\PDF\Controllers',
         'as' => 'laralum::'
     ], function () {
-        // First the suplementor, then the resource
-        // https://laravel.com/docs/5.4/controllers#resource-controllers
-        Route::get('pdf', 'PDFController@index')->name('pdf.index');
-        Route::post('show', 'PDFController@show')->name('pdf.show');
-
+        Route::get('PDF', 'PDFController@index')->name('pdf.index');
+        Route::post('PDF/show', 'PDFController@show')->name('pdf.show');
 });

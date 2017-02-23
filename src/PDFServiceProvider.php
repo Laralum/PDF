@@ -23,6 +23,10 @@ class PDFServiceProvider extends ServiceProvider
         $this->app->register('Barryvdh\\DomPDF\\ServiceProvider');
         $this->app->register('GrahamCampbell\\Markdown\\MarkdownServiceProvider');
 
+        if (!file_exists(storage_path('fonts'))) {
+            mkdir(storage_path('fonts'));
+        }
+
     }
 
     /**
