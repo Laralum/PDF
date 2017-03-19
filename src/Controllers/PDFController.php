@@ -10,7 +10,7 @@ use Response;
 class PDFController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the custom PDF creator form.
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,8 +20,22 @@ class PDFController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Download the PDF.
      *
+     * @param string $name
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function download(Request $request, $name = 'output')
+    {
+        $pdf  = PDF::loadView('laralum_pdf::pdf', ['text' => $request->text]);
+        return $pdf->download("$name.pdf");
+    }
+
+    /**
+     * Display the PDF.
+     *
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)
