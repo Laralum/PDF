@@ -74,8 +74,8 @@
 
         <div id="header">
                 &nbsp;
-            <div class="left">Laralum Administration Panel</div>
-            <div class="right">Èrik Campobadal</div>
+            <div class="left">{{ \Laralum\Settings\Models\Settings::first()->appname }}</div>
+            <div class="right"></div>
             <hr />
         </div>
         <div id="footer">
