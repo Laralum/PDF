@@ -15,7 +15,7 @@ Route::group([
         'namespace' => 'Laralum\PDF\Controllers',
         'as' => 'laralum::'
     ], function () {
-        Route::get('PDF', 'PDFController@index')->name('pdf.index');
+        // Route::get('PDF', 'PDFController@index')->name('pdf.index');
         Route::post('PDF/show', 'PDFController@show')->name('pdf.show');
         Route::post('PDF/download/{name?}', 'PDFController@download')->name('pdf.download');
 });

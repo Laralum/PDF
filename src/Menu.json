@@ -1,8 +1,0 @@
-{
-    "items": [
-        {
-            "trans": "laralum_pdf::general.generate_pdf",
-            "route": "laralum::pdf.index"
-        }
-    ]
-}
