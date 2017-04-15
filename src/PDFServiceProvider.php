@@ -26,7 +26,6 @@ class PDFServiceProvider extends ServiceProvider
         if (!file_exists(storage_path('fonts'))) {
             mkdir(storage_path('fonts'));
         }
-
     }
 
     /**
