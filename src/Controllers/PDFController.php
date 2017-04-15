@@ -1,10 +1,10 @@
 <?php
 
 namespace Laralum\PDF\Controllers;
+
 use App\Http\Controllers\Controller;
-use Laralum\PDF\Models\Permission;
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Http\Request;
 use Response;
 
 class PDFController extends Controller
@@ -22,13 +22,15 @@ class PDFController extends Controller
     /**
      * Download the PDF.
      *
-     * @param string $name
+     * @param string                   $name
      * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function download(Request $request, $name = 'output')
     {
-        $pdf  = PDF::loadView('laralum_pdf::pdf', ['text' => $request->text]);
+        $pdf = PDF::loadView('laralum_pdf::pdf', ['text' => $request->text]);
+
         return $pdf->download("$name.pdf");
     }
 
@@ -36,13 +38,13 @@ class PDFController extends Controller
      * Display the PDF.
      *
      * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)
     {
-        $pdf  = PDF::loadView('laralum_pdf::pdf', ['text' => $request->text]);
-        return Response::make($pdf->download('output.pdf'), 200, array('content-type' => 'application/pdf'));
+        $pdf = PDF::loadView('laralum_pdf::pdf', ['text' => $request->text]);
+
+        return Response::make($pdf->download('output.pdf'), 200, ['content-type' => 'application/pdf']);
     }
-
-
 }
