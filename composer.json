@@ -2,10 +2,10 @@
     "name": "laralum/pdf",
     "description": "PDF module for laralum",
     "require": {
-		"laralum/laralum": "dev-master",
+	"laralum/laralum": "1.*",
         "barryvdh/laravel-dompdf" : "0.8",
         "graham-campbell/markdown": "^7.0"
-	},
+    },
     "license": "MIT",
     "authors": [
         {
