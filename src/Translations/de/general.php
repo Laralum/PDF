@@ -17,6 +17,6 @@ return [
     'edit'              => 'Bearbeiten',
     'create'            => 'Erstellen',
     'description'       => 'Beschreibung',
-    'submit'            => 'Einreichen',
-    'cancel'            => 'Stornieren',
+    'submit'            => 'Absenden',
+    'cancel'            => 'Abbrechen',
 ];
